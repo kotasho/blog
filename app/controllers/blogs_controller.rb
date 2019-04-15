@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
   
 
   def index
-    @articles = Article.all.order("id DESC")
+    @articles = Article.includes(:user).page(params[:page]).per(5).order("created_at DESC")
   end
   
   def new
