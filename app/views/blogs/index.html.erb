@@ -35,10 +35,10 @@
 
   <% @articles.each do |article| %>
    <%= render partial: "article", locals: { article: article } %>
-</ul>
+
 
   <% end %>
-  <%# <%= paginate(@articles) %> 
+ <%= paginate(@articles) %> 
 </div>
 
 
